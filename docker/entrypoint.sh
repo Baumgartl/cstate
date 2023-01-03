@@ -13,6 +13,10 @@ fi
 
 cd $WORK_DIR
 
+# Mark working directory as safe for Git
+echo "[CSTATE-DOCKER] Configuring Git environment..."
+git config --global --add safe.directory $WORK_DIR
+
 # Build the hugo site
 echo "[CSTATE-DOCKER] Running hugo build service..."
 hugo
